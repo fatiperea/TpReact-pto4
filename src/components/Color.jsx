@@ -5,7 +5,9 @@ const Color = () => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Header>Color</Card.Header>
-      <Card.Body className="color"></Card.Body>
+      <Card.Body >
+        <div className="color"></div>
+      </Card.Body>
         
       <Card.Footer>
         <Button variant="primary">Borrar</Button>
