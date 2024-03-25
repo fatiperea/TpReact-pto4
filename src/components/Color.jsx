@@ -1,12 +1,13 @@
 import '../App.css'
 import { Card, Button } from "react-bootstrap";
 
-const Color = () => {
+/*const Color = ({color}) => {
+  console.log(color)
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Header>Color</Card.Header>
+      <Card.Header>Color:{color.nombreColor}</Card.Header>
       <Card.Body >
-        <div className="color"></div>
+        <div className=""></div>
       </Card.Body>
         
       <Card.Footer>
@@ -16,4 +17,4 @@ const Color = () => {
   );
 };
 
-export default Color;
+export default Color;*/

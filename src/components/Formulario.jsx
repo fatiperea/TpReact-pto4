@@ -1,6 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import ListaColores from "./ListaColores";
-import Color from "./Color";
+//import Color from "./Color";
 
 const Formulario = () => {
   return (
