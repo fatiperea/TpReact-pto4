@@ -10,17 +10,18 @@ const Formulario = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm();
 
-  const validacion = async(color) => {
+  const validacion = async (color) => {
     console.log(color);
-    const respuesta=await crearColorApi(color);
-    if(respuesta.status===201){
-      console.log("Color creado")
+    const respuesta = await crearColorApi(color);
+    if (respuesta.status === 201) {
+      console.log("Color creado");
       reset();
-    }else{console.log("error")}
-    
+    } else {
+      console.log("error");
+    }
   };
 
   return (

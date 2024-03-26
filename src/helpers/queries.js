@@ -24,3 +24,17 @@ export const crearColorApi = async (colorNuevo) => {
     console.log(error);
   }
 };
+
+export const borrarColorApi = async (id) => {
+  try {
+    const respuesta = await fetch(`${URI_COLORES}/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "aplication/json" },
+      body: JSON.stringify(colorNuevo),
+    });
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};

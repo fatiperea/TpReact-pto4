@@ -3,15 +3,19 @@
     {
       "nombreColor": "rosa",
       "color": "#ff66c4",
-      "id": "1"
+      "posicion": "1"
     },
     {
       "id": "8f63",
-      "nombreColor": "amarillo"
+      "nombreColor": "amarillo",
+      "posicion": "2"
+
     },
     {
       "id": "abd4",
-      "nombreColor": "verde"
+      "nombreColor": "verde",
+      "posicion": "3"
+
     }
   ]
 }

@@ -14,7 +14,7 @@ function App() {
         <ListaColores>
           
         </ListaColores>
-        
+        {/*<Color></Color>*/}
       </Container>
     </>
   );
