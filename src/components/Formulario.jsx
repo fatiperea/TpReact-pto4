@@ -1,6 +1,7 @@
 import { Button, Form, FormText } from "react-bootstrap";
 import ListaColores from "./ListaColores";
 import { useForm } from "react-hook-form";
+import { crearColorApi } from "../helpers/queries";
 
 //import Color from "./Color";
 
@@ -9,10 +10,17 @@ const Formulario = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
-  const validacion = (color) => {
+  const validacion = async(color) => {
     console.log(color);
+    const respuesta=await crearColorApi(color);
+    if(respuesta.status===201){
+      console.log("Color creado")
+      reset();
+    }else{console.log("error")}
+    
   };
 
   return (
@@ -29,7 +37,9 @@ const Formulario = () => {
               maxLength: { value: 10, message: "10 caracteres maximo" },
             })}
           />
-          <FormText className="text-danger">{errors.nombreColor?.message}</FormText>
+          <FormText className="text-danger">
+            {errors.nombreColor?.message}
+          </FormText>
         </Form.Group>
 
         <Button variant="primary" type="submit" className="mb-5">

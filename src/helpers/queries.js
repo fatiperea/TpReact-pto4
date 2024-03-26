@@ -10,3 +10,17 @@ export const leerColorApi = async () => {
     console.log(error);
   }
 };
+
+export const crearColorApi = async (colorNuevo) => {
+  try {
+    const respuesta = await fetch(URI_COLORES, {
+      method: "POST",
+      headers: { "Content-Type": "aplication/json" },
+      body: JSON.stringify(colorNuevo),
+    });
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};

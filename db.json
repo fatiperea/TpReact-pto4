@@ -1,7 +1,17 @@
 {
-    "colores":[{
-        "nombreColor": "rosa",
-        "color":"#ff66c4",
-        "id":"1"
-    }]
+  "colores": [
+    {
+      "nombreColor": "rosa",
+      "color": "#ff66c4",
+      "id": "1"
+    },
+    {
+      "id": "8f63",
+      "nombreColor": "amarillo"
+    },
+    {
+      "id": "abd4",
+      "nombreColor": "verde"
+    }
+  ]
 }
