@@ -1,11 +1,11 @@
 import "../App.css";
 import { Card, Button } from "react-bootstrap";
-//import { borrarColorApi, leerColorApi } from "../helpers/queries";
-/*
-const Color = ({ color, setColores }) => {
-  console.log(color);
+import { borrarColorApi, leerColorApi } from "../helpers/queries";
 
-  const borrarColor = async (id) => {
+const Color = ({ color, setColores }) => {
+
+  const borrarColor = async () => {
+    console.log("quiero borrar: ", color.id);
     const respuesta = await borrarColorApi(color.id);
     console.log("borrar: ", respuesta);
     if (respuesta.status === 201) {
@@ -19,18 +19,19 @@ const Color = ({ color, setColores }) => {
   };
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Header>Color:{color.nombreColor}</Card.Header>
+      <Card.Header>Color: {color.nombreColor}</Card.Header>
       <Card.Body>
         <div className=""></div>
       </Card.Body>
 
       <Card.Footer>
-        <Button variant="primary" onClick={borrarColor}>
+        <Button variant="primary"onClick={borrarColor}>
           Borrar
         </Button>
+        <Button variant="primary"onClick={borrarColor}>Editar</Button>
       </Card.Footer>
     </Card>
   );
 };
 
-export default Color;*/
+export default Color;

@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Formulario from "./components/Formulario";
 import { Container } from "react-bootstrap";
 import ListaColores from "./components/ListaColores";
-//import Color from "./components/Color";
+import Color from "./components/Color";
 
 function App() {
   //<Color></Color>
@@ -14,7 +14,7 @@ function App() {
         <ListaColores>
           
         </ListaColores>
-        {/*<Color></Color>*/}
+        
       </Container>
     </>
   );

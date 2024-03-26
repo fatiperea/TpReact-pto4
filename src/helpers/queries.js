@@ -28,9 +28,7 @@ export const crearColorApi = async (colorNuevo) => {
 export const borrarColorApi = async (id) => {
   try {
     const respuesta = await fetch(`${URI_COLORES}/${id}`, {
-      method: "DELETE",
-      headers: { "Content-Type": "aplication/json" },
-      body: JSON.stringify(colorNuevo),
+      method: "DELETE"
     });
     console.log(respuesta);
     return respuesta;
@@ -38,3 +36,19 @@ export const borrarColorApi = async (id) => {
     console.log(error);
   }
 };
+
+export const editarColorApi = async(id, color) =>{
+  try {
+      const respuesta = await fetch(`${URI_COLORES}/${id}`,{
+          method: "PUT",
+          headers:{
+              "Content-Type":"application/json"
+          },
+          body: JSON.stringify(color)
+      })
+      //console.log(respuesta);
+      return respuesta;
+  } catch (error) {
+      console.log(error)
+  }
+}

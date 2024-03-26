@@ -3,7 +3,7 @@ import ListaColores from "./ListaColores";
 import { useForm } from "react-hook-form";
 import { crearColorApi } from "../helpers/queries";
 
-//import Color from "./Color";
+import Color from "./Color";
 
 const Formulario = () => {
   const {
