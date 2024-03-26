@@ -1,14 +1,35 @@
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, FormText } from "react-bootstrap";
 import ListaColores from "./ListaColores";
+import { useForm } from "react-hook-form";
+
 //import Color from "./Color";
 
 const Formulario = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const validacion = (color) => {
+    console.log(color);
+  };
+
   return (
     <section>
-      <Form>
+      <Form onSubmit={handleSubmit(validacion)}>
         <Form.Group className="mb-3" controlId="color">
           <Form.Label>Ingresar color:</Form.Label>
-          <Form.Control type="text" placeholder="Color" />
+          <Form.Control
+            type="text"
+            placeholder="Color"
+            {...register("nombreColor", {
+              required: "Campo obligatorio",
+              minLength: { value: 4, message: "4 caracteres minimo" },
+              maxLength: { value: 10, message: "10 caracteres maximo" },
+            })}
+          />
+          <FormText className="text-danger">{errors.nombreColor?.message}</FormText>
         </Form.Group>
 
         <Button variant="primary" type="submit" className="mb-5">
